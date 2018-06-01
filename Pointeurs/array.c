@@ -11,7 +11,7 @@ int *create_array(int size){
 
 void display_array(int *array, int size){
 	for(int j=0;j<size;++j){
-		printf("%f | ",array[j]);
+		printf("%d | ",array[j]);
 	}	
 }
 
