@@ -2,14 +2,22 @@
 #include <string.h>
 
 char *my_strcat(char *dest, const char *src) {
-	char *cp = dest;
-	while ( *cp)
-		cp++;
-	while (*cp++ = *src++);
-	return dest;	 
+	char *tempo = dest;
+	while(*dest != '\0'){
+		dest++;
+	}
+	while(*src != '\0'){
+		*dest = *src;
+		src++;
+		dest++;
+	}
+	*dest = '\0';	
+	return tempo;	 
 }
-int main(void){
-	char mot[7] = "Bonjour";
-	char mot2[5] = "salut";
-	printf("%s", *my_strcat(mot, mot2));
+int main(void) {
+	char mot[] = "Bon";
+	char mot2[] = "jour";
+	char *res = my_strcat(mot,mot2);
+	printf("%s ",res);
 }
+
